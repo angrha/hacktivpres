@@ -79,6 +79,24 @@ const store = new Vuex.Store({
           })
           console.log(err)
         })
+    },
+    addArticle ({ commit }, payload) {
+      axios.post(baseUrl + '/articles', payload, {
+        headers: {
+          token: localStorage.getItem(pres)
+        }
+      })
+        .then(response => {
+          console.log(response.data.artilce, 'ini di axios')
+        })
+        .catch(err => {
+          swal({
+            text: `${err}`,
+            icon: 'error',
+            button: 'next'
+          })
+          console.log(err)
+        })
     }
 
   }
