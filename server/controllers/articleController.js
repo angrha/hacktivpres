@@ -15,7 +15,7 @@ class ArticleController {
       })
   }
 
-  static createArticle(req, res) {
+  static create(req, res) {
     let article = new Article({
       author : req.decoded.id,
       title: req.body.title,

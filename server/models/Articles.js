@@ -7,7 +7,7 @@ const articleSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'User'
   },
-  content: Number,
+  content: String,
   image: String,
   category: String
 },{
