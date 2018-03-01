@@ -6,10 +6,11 @@
       </div>
       <img style="height: 200px; width: 100%; display: block;" :src="article.image" alt="Card image">
       <div class="card-body">
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <p class="card-text">{{ article.content.substr(0, 50)}}</p>
       </div>
       <div class="card-body">
-        <a href="#" class="card-link">View Detail</a>
+        <router-link :to="{ name: 'ArticleDetail', params: { id: article._id } }" class="card-link">View Detail</router-link>
+        <a href="#" class="card-link"> {{ article.author.username }}</a>
       </div>
     </div>
   </div>

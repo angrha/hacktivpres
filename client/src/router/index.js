@@ -4,6 +4,7 @@ import Home from '@/views/Home'
 import Signup from '@/views/Signup'
 import Articles from '@/views/Articles'
 import ArticleList from '@/components/ArticleList'
+import ArticleDetail from '@/components/ArticleDetail'
 
 Vue.use(Router)
 
@@ -27,6 +28,12 @@ export default new Router({
           path: '',
           name: 'ArticleList',
           component: ArticleList
+        },
+        {
+          path: ':id',
+          name: 'ArticleDetail',
+          props: true,
+          component: ArticleDetail
         }
       ]
     }

@@ -3,6 +3,7 @@ const Article = require('../models/Articles')
 class ArticleController {
   static findAll (req, res) {
     Article.find()
+      .populate('author')
       .then(articles => {
         res.status(200).json({
           message: 'all articles',
