@@ -24,7 +24,6 @@ const store = new Vuex.Store({
         .then(response => {
           localStorage.setItem(pres, response.data.token)
           commit('SET_LOGIN', true)
-          router.push({name: 'QuestionList'})
         })
         .catch(err => {
           swal({
@@ -43,7 +42,7 @@ const store = new Vuex.Store({
     signout ({ commit }) {
       localStorage.clear()
       commit('SET_LOGIN', false)
-      router.push({name: 'LandingPage'})
+      router.push({name: 'Home'})
     },
     signup ({ commit }, payload) {
       axios.post(baseUrl + '/users/signup', payload)

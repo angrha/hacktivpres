@@ -1,5 +1,5 @@
 <template>
-  <div> <h1> the signup </h1></div>
+  <div><h1> ini article list</h1></div>
 </template>
 
 <script>
