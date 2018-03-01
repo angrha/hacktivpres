@@ -1,6 +1,6 @@
 <template>
   <div class="container flx">
-    <div class="bg-reg col-lg-5 col-lg-offset-6">
+    <div class="col-lg-5 col-lg-offset-6">
       <form>
         <fieldset>
           <div class="form-group row" style="margin: auto;" >
@@ -54,7 +54,9 @@ export default {
 </script>
 
 <style>
-.bg-reg {
-  margin: auto;
+.flx {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
 }
 </style>

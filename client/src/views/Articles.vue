@@ -1,7 +1,7 @@
 <template>
   <div class="bg-home">
     <div class="container-fluid">
-      <div class="flx-hm">
+      <div class="flx-hm col-md-8">
         <router-view></router-view>
       </div>
     </div>
@@ -28,6 +28,7 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 60px;
+  margin-top: 20px;
+  background-color: blue;
 }
 </style>

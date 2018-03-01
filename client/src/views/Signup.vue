@@ -61,10 +61,5 @@ export default {
 </script>
 
 <style>
-.flx {
-  display: flex;
-  justify-content: center;
-  margin-top: 100px;
-}
 
 </style>

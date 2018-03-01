@@ -11,11 +11,15 @@ const baseUrl = 'http://localhost:3000/api'
 
 const store = new Vuex.Store({
   state: {
-    isLogin: false
+    isLogin: false,
+    articles: []
   },
   mutations: {
     SET_LOGIN (state, payload) {
       state.isLogin = payload
+    },
+    LOAD_ARTICLES (state, payload) {
+      state.articles = payload
     }
   },
   actions: {
@@ -56,6 +60,20 @@ const store = new Vuex.Store({
         .catch(err => {
           swal({
             text: `${err.response.data.message}`,
+            icon: 'error',
+            button: 'next'
+          })
+          console.log(err)
+        })
+    },
+    getAllArticles ({ commit }) {
+      axios.get(baseUrl + '/articles')
+        .then(response => {
+          commit('LOAD_ARTICLES', response.data.articles)
+        })
+        .catch(err => {
+          swal({
+            text: `${err}`,
             icon: 'error',
             button: 'next'
           })
